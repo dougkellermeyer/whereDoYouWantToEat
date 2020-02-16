@@ -1,29 +1,31 @@
 const restaurants = [
-    'Trata',
-    'Roux',
-    'Owl House',
-    'Texas Roadhouse',
-    'Hong Wah',
-    'Roam',
-    'Pittsford Pub',
-    "McDonald's",
-    "Tom Wahl's",
-    "Bill Gray's",
-    "Wegman's",
-    "P.F. Chang's",
-    'Cheesecake Factory',
-    "Moe's",
-    'Revelry',
-    'Food at Fisher Station',
-    'Char Broil',
-    "Leo's",
-    'Basha',
-    'Spiedielicious',
-    'Monte Alban',
-    'Panera',
-    'Fiamma Centro',
-    'Nosh',
-    'Philly Steak Out',
+    {name: 'Trata', category: "American"},
+    {name: 'Roux', category: "French"},
+    {name: 'Owl House', category: ""},
+    {name: 'Texas Roadhouse', category: "American"},
+    {name: 'Hong Wah', category: "Asian"},
+    {name: 'Roam', category: "American"},
+    {name: 'Pittsford Pub', category: "American"},
+    {name: "McDonald's", category: "American"},
+    {name: "Tom Wahl's", category: "American"},
+    {name: "Bill Gray's", category: "American"},
+    {name:  "Wegman's", category: ""},
+    {name: "P.F. Chang's", category: "Asian"},
+    {name: 'Cheesecake Factory', category: "American"},
+    {name:"Moe's", category: "Mexican"},
+    {name: 'Revelry', category: "American"},
+    {name: 'Food at Fisher Station', category: "Breakfast"},
+    {name: 'Char Broil', category: "Breakfast"},
+    {name: "Leo's", category: "Sandwiches"},
+    {name: 'Basha', category: "Greek"},
+    {name: 'Spiedielicious', category: "Greek"},
+    {name: 'Monte Alban', category: "Mexican"},
+    {name: 'Panera', category: "Sandwiches"},
+    {name: 'Fiamma Centro', category: "Italian"},
+    {name: 'Nosh', category: "American"},
+    {name:  'Philly Steak Out',category: "American"},
+
+    
     "Pontillo's",
     "Mr. Dominic's",
     "Joey's",
@@ -44,18 +46,24 @@ const restaurants = [
     "DiBella's"
 ];
 
-const categories = ["Italian", "American", "Fast Food", "Sandwiches", "Bakeries", "Asian", "Breakfast", ""];
-const descriptions = ["Description 1", "Description 2", "Description 3"];
+const categories = ["Italian", "American", "Fast-food", "Sandwiches", "Bakeries", "Asian", "Breakfast", "French", "Mexican", "Greek"];
 
 const giveRandomRestaurant = () => {
     const anyRestaurant = document.getElementById("anyRestaurant");
     let randomRestaurant = restaurants[Math.floor(Math.random() * restaurants.length)];
-    anyRestaurant.innerHTML ="<h3>" + randomRestaurant + "</h3>";
+    anyRestaurant.innerHTML ="<h3>" + randomRestaurant.name + "</h3>";
 };
 
 const generateDropdown = () =>  {
     const categoryDropdown = document.getElementById("categoryDropdown");
-    categoryDropdown.insertAdjacentHTML("afterbegin", categories.map(category => "<a class='dropdown-item'>" + category + "</a>").join(''));
+    categoryDropdown.insertAdjacentHTML("afterbegin", 
+    categories.map(category => `<a class='dropdown-item' onClick = showCategoryList('${category}')>` + category + "</a>").join(''));
+};
+
+const categoryList = document.getElementById("categoryList");
+
+const showCategoryList = (category) => {
+    categoryList.innerHTML = "<h3>" + category + " restaurants:" + "</h3>"; 
 };
 
 generateDropdown();
