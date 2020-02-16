@@ -18,7 +18,7 @@
         <h1>Where should we eat?</h1>
         <p>A solution for a problem as old as time</p>
         <p>
-            <a class='btn btn-primary btn-lg' href='#' role='button'>Anywhere!</a>
+            <a class='btn btn-primary btn-lg' href='#' role='button' onClick="giveRandomRestaurant()">Anywhere!</a>
         </p>
     </div>
 
@@ -27,15 +27,10 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Type of food
         </button>
-
-        <div id="categoryDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-        </div>
+        <div id="categoryDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
     </div>
 
-    <div id="categoryWrapper">
-        
-    </div>
+    <div id="anyRestaurant"></div>
 
     <!--JavaScript link-->
   <script src='main.js'></script>
