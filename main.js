@@ -46,7 +46,19 @@ const restaurants = [
     {name: "DiBella's", category: "Sandwiches"}
 ];
 
-const categories = ["Italian", "American", "Fast-food", "Sandwiches", "Bakeries", "Asian", "Breakfast", "French", "Mexican", "Greek", "Pizza"];
+const categories = [
+    "Italian", 
+    "American", 
+    "Fast-food", 
+    "Sandwiches", 
+    "Bakeries", 
+    "Asian", 
+    "Breakfast", 
+    "French", 
+    "Mexican",
+     "Greek", 
+     "Pizza"
+];
 
 const giveRandomRestaurant = () => {
     const anyRestaurant = document.getElementById("anyRestaurant");

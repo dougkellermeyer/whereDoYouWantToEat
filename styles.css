@@ -1,0 +1,18 @@
+#dropDownWrapper {
+    margin-left: 2rem
+}
+
+#randomRestaurantButton {
+    background-color: #4CAF50
+}
+
+#anyRestaurant {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#categoryList {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
