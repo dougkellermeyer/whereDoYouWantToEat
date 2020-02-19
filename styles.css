@@ -16,3 +16,37 @@
     margin-left: 2rem;
     margin-top: 1rem;
 }
+
+@media (min-width: 650px) {
+    h1 {
+        font-size: 4.5rem !important;
+    }
+    p {
+        font-size: 2rem;
+        display: flex;
+        width: 65%;
+        align-items: center;
+    }
+
+    #dropdownMenuButton {
+        width: 30%;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    a.dropdown-item {
+        font-size: 1.5rem;
+    }
+
+    #categoryDropdown {
+        width: 30%;
+    }
+
+    #randomRestaurantButton {
+        font-size: 1.8rem;
+        width: 250px;
+        height: 100px;
+        padding-top: 25px;
+    }
+
+}
